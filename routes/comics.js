@@ -5,6 +5,7 @@ const axios = require("axios");
 
 router.get("/", async (req, res) => {
   try {
+    const limit = 100; // Nombre de comics à récupérer
     const response = await axios.get(
       `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${apiKey}`
     );
