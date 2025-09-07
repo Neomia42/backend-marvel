@@ -13,6 +13,7 @@ const User = require("../models/User");
 
 // CREATE USER
 router.post("/signup", fileUpload(), convertToBase64, async (req, res) => {
+  console.log(req.body, req.files);
   try {
     if (
       !req.body.email ||
